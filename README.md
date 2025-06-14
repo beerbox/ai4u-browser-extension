@@ -2,6 +2,11 @@
 
 Ai4u Browser extension that enables communication between your web browser and local Ollama server.
 
+
+Demo of functionality:
+
+![Demo](demo.gif)
+
 ## Prerequisites
 
 1. **Ollama Installation**
