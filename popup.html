@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollama Summarizer</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            width: 350px;
+            padding: 10px 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 18px;
+            text-align: center;
+            color: #333;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        button:active {
+             transform: translateY(0);
+        }
+        #result {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            min-height: 50px;
+            font-size: 14px;
+            line-height: 1.5;
+            white-space: pre-wrap; /* Allows text to wrap */
+            word-wrap: break-word; /* Breaks long words */
+        }
+        .loader {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Page Summarizer</h1>
+    <button id="summarize-button">Summarize Page</button>
+    <div id="result">
+        Click the button to get a summary...
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
