@@ -66,7 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 body: JSON.stringify({
                     model: OLLAMA_MODEL,
                     prompt: prompt,
-                    stream: false // Set to false to get the full response at once.
+                    stream: false, // Set to false to get the full response at once.
+                    options: {
+                        "num_ctx": 10000
+                    }
                 }),
             });
 
