@@ -3,65 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ollama Summarizer</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            width: 350px;
-            padding: 10px 20px;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            font-size: 18px;
-            text-align: center;
-            color: #333;
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(45deg, #007bff, #0056b3);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-        button:active {
-             transform: translateY(0);
-        }
-        #result {
-            margin-top: 15px;
-            padding: 10px;
-            border-radius: 8px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            min-height: 50px;
-            font-size: 14px;
-            line-height: 1.5;
-            white-space: pre-wrap; /* Allows text to wrap */
-            word-wrap: break-word; /* Breaks long words */
-        }
-        .loader {
-            text-align: center;
-            padding: 20px;
-            font-style: italic;
-            color: #555;
-        }
-    </style>
+    <title>Ollama Prompt Executor</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <h1>Page Summarizer</h1>
-    <button id="summarize-button">Summarize Page</button>
-    <div id="result">
-        Click the button to get a summary...
+    <div class="tab">
+        <button class="tablinks" id="executor-tab-button">Prompt Executor</button>
+        <button class="tablinks" id="settings-tab-button">Settings</button>
     </div>
+
+    <div id="Executor" class="tabcontent">
+        <h1>Prompt Executor</h1>
+        <button id="execute-button">Execute Prompt</button>
+        <div id="result">
+            Click the button to execute the prompt...
+        </div>
+    </div>
+
+    <div id="Settings" class="tabcontent">
+        <h2>Prompt Settings</h2>
+        <p>Enter your custom prompt below. Use <code>{{pageText}}</code> as a placeholder for the page content.</p>
+        <textarea id="prompt-textarea"></textarea>
+        
+        <h2>Model Settings</h2>
+        <p>Enter the name of the Ollama model to use (e.g., "gemma3:latest").</p>
+        <input type="text" id="model-input" style="width: 95%; padding: 5px;">
+
+        <button id="save-settings-button">Save Settings</button>
+        <button id="restore-defaults-button">Restore Default</button>
+        <div id="save-success" style="color: green; margin-top: 10px;"></div>
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>
