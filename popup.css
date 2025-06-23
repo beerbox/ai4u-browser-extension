@@ -1,0 +1,153 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    width: 350px;
+    padding: 15px;
+    background-color: #f4f4f8;
+    min-height: 400px;
+    color: #333;
+}
+h1 {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 13px;
+    color: #555;
+    margin-top: 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 15px;
+}
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+button:active {
+    transform: translateY(0);
+}
+#result {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    min-height: 50px;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.loader {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #777;
+}
+
+/* Tab styles */
+.tab {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: -2px; /* Overlap with content border */
+    position: relative;
+    z-index: 1;
+}
+
+.tab button {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    color: #252525;
+    flex: 1;
+    text-align: center;
+    box-shadow: none;
+    margin-top: 0;
+    border-radius: 0;
+    font-weight: 500;
+}
+
+.tab button:hover {
+    background-color: #FFFFFF;
+    color: #333;
+    transform: none;
+    box-shadow: none;
+}
+
+.tab button.active {
+    color: #FFF;
+    font-weight: bold;
+    border-bottom-color: #007bff;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#prompt-textarea,
+#model-input {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+#prompt-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#save-settings-button {
+    background: #28a745;
+}
+#save-settings-button:hover {
+    background: #218838;
+}
+
+#restore-defaults-button {
+    background: #ffc107;
+    color: #212529;
+}
+#restore-defaults-button:hover {
+    background: #e0a800;
+}
+
+#save-success {
+    text-align: center;
+} 

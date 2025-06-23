@@ -7,6 +7,15 @@ Demo of functionality:
 
 ![Demo](demo.gif)
 
+## Features
+
+- **Dynamic Prompt Execution**: Execute any prompt against the content of the current web page.
+- **Customizable Prompts**: Create, save, and manage your own prompts. Use `{{pageText}}` as a placeholder for the page content.
+- **Flexible Model Selection**: Easily switch between different Ollama models.
+- **Tabbed Interface**: A clean, two-tab layout for "Prompt Executor" and "Settings".
+- **Local Storage**: Your custom prompts and model settings are saved locally for convenience.
+- **Modern UI**: A refreshed and intuitive user interface.
+
 ## Prerequisites
 
 1. **Ollama Installation**
@@ -100,10 +109,29 @@ Demo of functionality:
 
 ## Usage
 
-1. Click the extension icon in your browser toolbar
-2. The extension will attempt to connect to your local Ollama server
-3. Once connected, you can interact with the Gemma 3 model through the extension interface
-4. **Keyboard Shortcut**: Press `Alt+Shift+S` (Windows/Linux) or `Alt+Shift+S` (macOS) to quickly trigger the extension popup
+The extension is designed to be simple and intuitive.
+
+### Prompt Executor Tab
+1.  Navigate to the web page you want to process.
+2.  Click the extension icon in your browser toolbar.
+3.  The **Prompt Executor** tab will be active by default.
+4.  Click **"Execute Prompt"**.
+5.  The extension will grab the text content from the page, insert it into your configured prompt (replacing `{{pageText}}`), and send it to your local Ollama server with the selected model.
+6.  The response from Ollama will be displayed in the result area.
+
+### Settings Tab
+This tab allows you to customize the extension's behavior.
+
+1.  **Custom Prompt**:
+    -   Modify the prompt in the textarea. Remember to include `{{pageText}}` where you want the page's content to be inserted.
+    -   Click **"Restore Default"** to revert to the original prompt.
+2.  **Model Settings**:
+    -   Enter the name of the Ollama model you want to use (e.g., `gemma3:latest`, `llama3:8b`).
+3.  **Save**:
+    -   Click **"Save Settings"** to store your custom prompt and model name. These settings will be remembered for future use.
+
+### Keyboard Shortcut
+- Press `Alt+Shift+S` (Windows/Linux) or `Option+Shift+S` (macOS) to quickly open the extension popup.
 
 ## Troubleshooting
 
